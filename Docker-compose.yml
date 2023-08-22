@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: alpuchino/wow-app:wow
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./games:/app/games
+    environment:
+      FLASK_ENV: development
+
+
